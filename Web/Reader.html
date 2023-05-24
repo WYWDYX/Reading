@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>阅读器</title>
+  <link rel="stylesheet" type="text/css" href="../css/Reader.css">
+  <link rel="shortcut icon" href="../Image/Logo.ico" type="image/x-icon">  
+</head>
+<body>
+  <div style="min-width:1050px;min-height:100px;margin-right:0%;margin-left:0%">
+	<header>
+	  <div class="logo">
+		<a href="#">
+          <svg id="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+            <circle cx="50" cy="50" r="45" fill="none" />
+            <path d="M 30,70 L 30,30 L 70,30" stroke="#ffffff" stroke-width="10" stroke-linecap="round" />
+            <path d="M 30,30 L 50,30 L 50,50 L 30,50 Z" fill="#ffffff" />
+            <path d="M 45,30 L 55,30 L 55,40 L 45,40 Z" fill="#1E88E5" />
+            <line x1="50" y1="50" x2="70" y2="70" stroke="#ffffff" stroke-width="10" stroke-linecap="round" />
+            <path d="M 70,70 L 50,70 L 50,50 L 70,50" stroke="#ffffff" stroke-width="10" stroke-linecap="round" />
+            <path d="M 50,55 L 60,55 L 60,45 L 50,45 Z" fill="#1E88E5" />
+          </svg>
+          <p>启始</p>
+        </a>
+	  </div>
+	  <nav>
+		<ul>
+		  <li><a href="#">主页</a></li>
+		  <li><a href="#">全部</a></li>
+		  <li><a href="#">分类</a></li>
+		  <li><a href="#">联系我们</a></li>
+		</ul>
+	  </nav>
+	</header>
+	
+	<button id="settingsBtn" href="#" style="box-shadow: 3px 3px 20px rgba(0,0,0,0.1)">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-sliders2" viewBox="0 0 16 16">
+      <path fill-rule="evenodd" d="M10.5 1a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V4H1.5a.5.5 0 0 1 0-1H10V1.5a.5.5 0 0 1 .5-.5ZM12 3.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5Zm-6.5 2A.5.5 0 0 1 6 6v1.5h8.5a.5.5 0 0 1 0 1H6V10a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5ZM1 8a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2A.5.5 0 0 1 1 8Zm9.5 2a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V13H1.5a.5.5 0 0 1 0-1H10v-1.5a.5.5 0 0 1 .5-.5Zm1.5 2.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5Z"/>
+    </svg>
+	</button>
+    <div id="settingsPanel">
+      <h3>设置</h3>
+      <div id="Content">
+        <div class="option">
+          <label>阅读主题</label>
+          <div class="colors">
+            <div class="color active" style="display: flex;align-items: center;justify-content: center">默认</div>
+            <div class="color" style="background-color: #F5F1E8"></div>
+            <div class="color" style="background-color: #F4ECD1"></div>
+            <div class="color" style="background-color: #DAF2DA"></div>
+            <div class="color" style="background-color: #DCEAEE"></div>
+            <div class="color" style="background-color: #464747"></div>
+          </div>
+        </div>
+        <div class="option">
+          <label>正文字体</label>
+          <div class="fonts">
+            <button class="font active" data-font="MyFont" style="font-family: 'MyFont'">得意黑</button>
+            <button class="font" data-font="SimSun" style="font-family: 'SimSun'">宋体</button>
+            <button class="font" data-font="KaiTi" style="font-family: 'KaiTi'">楷体</button>
+          </div>
+        </div>
+        <div class="option">
+          <label>字体大小</label>
+          <div class="size">
+            <button id="fontDecrease">A-</button>
+            <span id="settingsPanel-separator">|</span>
+            <span id="fontSize" class="settingsPanel-span">20</span>
+            <span id="settingsPanel-separator">|</span>
+            <button id="fontIncrease">A+</button>                
+          </div>
+        </div>
+        <div class="option">
+          <label>页面宽度</label>
+          <div class="width">
+            <button id="widthDecrease">W-</button>
+            <span id="settingsPanel-separator">|</span>
+            <span id="containerWidth" class="settingsPanel-span">800</span>
+            <span id="settingsPanel-separator">|</span>
+            <button id="widthIncrease">W+</button>
+          </div>
+        </div>
+        <div class="option">
+          <label>自动调节</label>
+          <label class="switch">
+            <input type="checkbox">
+            <span id="widthauto" class="slider round"></span>
+          </label>
+          <label id="settingsPanel-comment">打开开关之后,将自动调节页面宽度至百分之八十.</label>
+        </div>
+        <div class="option">
+          <label>提示</label>
+          <label id="settingsPanel-comment" style="width: 300px !important">考虑到用户体验部分功能仅在本页生效,刷新或切换页面将导致失效.</label>
+        </div>
+      </div>
+    </div>	
+	
+	<div id="txtContent"></div>
+	<div class="pagination">
+	  <button id="prevButton">上一页</button>
+	  <span>|</span>
+	  <input type="text" id="pageNumberInput" placeholder="页码">
+	  <button id="goButton">前往</button>
+	  <span>|</span>
+	  <button id="nextButton">下一页</button>
+	</div>	
+
+	<script src="../JavaScript/Reader.js"></script>
+  </div>
+</body>
+</html>
