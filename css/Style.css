@@ -1,0 +1,281 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'ZCOOL XiaoWei';
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background-color: transparent;
+  padding: 20px 10%;
+  color: #333333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 50;
+  transition: background-color 0.5s;
+}
+
+header.scrolled {
+  background-color: #FBEB3D;
+  opacity: 0.72;
+  backdrop-filter: brightness(1) saturate(180%) blur(50px);
+}
+
+.logo a {
+  position: relative;
+  color: #333333;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+#logo {
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: left;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+}
+
+nav li {
+  margin: 0 10px;
+}
+
+nav a {
+  position: relative;
+  color: #333333;
+  text-decoration: none;
+}
+
+nav a::before {
+  content: "";
+  position: absolute;
+  width: 0px;
+  height: 4px;
+  background: linear-gradient(90deg, #1F4296 0%, #FFFFFF 150%);
+  bottom: -10px;
+  border-radius: 4px;
+  transition: all 0.4s cubic-bezier(0.82, 0.02, 0.13, 1.26);
+  left: 0;
+}
+
+nav a:hover::before {
+  width: 100%;
+  left: 0;
+}
+
+main {
+  padding: 20px 10%;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+h2 {
+  font-size: 36px;
+  font-weight: 400;
+  color: #333333;
+  margin-bottom: 20px;
+}
+
+a:focus, a:active {
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+}
+
+::selection {
+  color: #1F4296;
+  background-color: #FBEB3D;
+}
+
+.hero {
+  background: linear-gradient(45deg, #FBEB3D 0%, #FFFFFF 120%);
+  padding: 60px 10%;
+  width: 100%;
+  height: 800px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hero-text {
+  max-width: 500px;
+}
+
+.hero-text h1 {
+  font-size: 50px;
+  font-weight: 400;
+  color: #333333;
+  margin-bottom: 20px;
+  line-height: 1.2;
+  text-shadow: 2px 2px #FFFFFF;
+}
+
+.hero-text p {
+  font-size: 20px;
+  line-height: 1.5;
+  color: #666666;
+  margin-bottom: 20px;
+}
+
+.hero svg {
+  max-width: 400px;
+  border-radius: 20px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease-in-out;
+}
+
+.hero svg:hover {
+  transform: scale(1.2);
+}
+
+.services {
+  padding: 20px;
+}
+
+.services-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.service {
+  max-width: 350px;
+  text-align: center;
+  padding: 40px 40px;
+  border-radius: 5px;
+  box-shadow: 3px 3px 20px rgba(0,0,0,0.1);
+  margin: 20px;
+  border-radius: 20px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.service a {
+  position: relative;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.service a::before {
+  content: "";
+  position: absolute;
+  width: 0px;
+  height: 2px;
+  background: linear-gradient(90deg, #1F4296 0%, #6495ED 100%);
+  bottom: 10px;
+  transition: all 0.4s cubic-bezier(0.82, 0.02, 0.13, 1.26);
+  left: 0;
+}
+
+.service a:hover::before {
+  width: 100%;
+  left: 0;
+}
+
+.service a:hover h3,
+.service a:hover ~ p {
+  color: #1F4296;
+}
+
+.service h3 {
+  font-size: 24px;
+  font-weight: 400;
+  color: #333333;
+  margin-bottom: 20px;
+}
+
+.service p {
+  font-size: 18px;
+  line-height: 1.5;
+  color: #666666;
+  margin-bottom: 20px;
+}
+
+.service:hover {
+  transform: scale(1.1);
+}
+
+.big-about {
+  padding: 20px;
+}
+
+.about {
+  background-color: #FFFFFF;
+  margin: 0 auto;
+  border-radius: 20px;
+  padding: 40px;
+  margin: 20px;
+  margin-bottom: 40px;
+  box-shadow: 3px 3px 20px rgba(0,0,0,0.1);
+  transition: transform .3s ease-in-out;
+}
+
+.about:hover {
+  transform: translateY(-2%);
+}
+
+.about a {
+  position: relative;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.about a::before {
+  content: "";
+  position: absolute;
+  width: 0px;
+  height: 2px;
+  background: linear-gradient(90deg, #FFA500 0%, #FBEB3D 100%);
+  bottom: 10px;
+  transition: all 0.4s cubic-bezier(0.82, 0.02, 0.13, 1.26);
+  left: 0;
+}
+
+.about a:hover::before {
+  width: 100%;
+  left: 0;
+}
+
+.about a:hover h2,
+.about a:hover ~ .about-container .about-text p {
+  color: #FFA500;
+}
+
+.about-container {
+  display: flex;
+  flex-direction: row-items: center;
+}
+
+.about-text p {
+  font-size: 20px;
+  line-height: 1.5;
+  color: #666666;
+  margin-bottom: 20px;
+  margin-left: 20px;
+}
+
+.contact {
+  background-color: #F5F5F5;
+  border-radius: 20px; 
+  padding: 20px;
+}
+
+footer {
+  color: #333;
+  text-align: center;
+  padding: 20px;
+}
