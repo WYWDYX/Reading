@@ -19,7 +19,7 @@
 
 ## 需求和贡献
 
-我们非常欢迎和感激你们的支持和贡献。如果你发现项目中存在问题，或者想更进一步的挑战期望的功能，欢迎提出 [PR](https://github.com/WYWDYX/Reading/pulls) 或 Issue。同时，我们建议开发者在本地设置一个运行环境，并在本地完成功能和测试，以提高贡献的效率。
+我们非常欢迎和感激你们的支持和贡献。如果你发现项目中存在问题，或者想更进一步的挑战期望的功能，欢迎提出 [PR](https://github.com/WYWDYX/Reading/pulls) 或 [Issue](https://github.com/WYWDYX/Reading/issues)。同时，我们建议开发者在本地设置一个运行环境，并在本地完成功能和测试，以提高贡献的效率。
 
 ### 开发要求
 
